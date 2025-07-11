@@ -1,44 +1,43 @@
+// Espera o documento HTML ser completamente carregado antes de rodar o script
 document.addEventListener('DOMContentLoaded', () => {
-
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
 
-    // Animação de "revelar" ao rolar a página
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            // Só adiciona o efeito se o menu não estiver aberto, para evitar bugs visuais
+            const menuAberto = navLinks ? navLinks.classList.contains('active') : false;
+            
+            if (!menuAberto) {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+        });
+    }
+
+    // =======================================================
+    // ANIMAÇÃO DE REVELAR ELEMENTOS AO ROLAR
+    // =======================================================
     const revealElements = document.querySelectorAll('.reveal');
     
+    // Função que verifica a posição e adiciona a classe 'active'
     const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
         revealElements.forEach(el => {
             const elementTop = el.getBoundingClientRect().top;
-            if (elementTop < windowHeight - 100) { // Revela um pouco antes de chegar no elemento
+            if (elementTop < windowHeight - 100) { // O elemento aparece um pouco antes de chegar na tela
                 el.classList.add('active');
             }
         });
     };
 
+    // Roda a função quando a página é rolada e também no carregamento inicial
     window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Revela elementos já visíveis no carregamento
-
-    // Lógica do formulário de reserva
-    const reservationForm = document.getElementById('reservation-form');
-    reservationForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Impede o recarregamento da página
-
-        // Coleta os dados do formulário
-        const name = document.getElementById('name').value;
-        const date = document.getElementById('date').value;
-        
-        // Simula o envio e mostra uma mensagem de sucesso
-        alert(`Obrigado, ${name}! Sua pré-reserva para ${new Date(date).toLocaleDateString()} foi enviada. Entraremos em contato para confirmar.`);
-
-        // Limpa o formulário
-        reservationForm.reset();
-    });
+    revealOnScroll();
 
 });
+
+// A LÓGICA DO FORMULÁRIO FOI REMOVIDA DAQUI INTENCIONALMENTE.
+// ELE AGORA FUNCIONARÁ USANDO OS ATRIBUTOS 'action' E 'method' DO HTML.
