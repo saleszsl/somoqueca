@@ -2,7 +2,7 @@
 :root {
     --primary-color: #E67E22; /* Laranja Dendê */
     --secondary-color: #FDF4E3; /* Bege Areia */
-    --orange-color: #eb8613;
+    --dark-color: #493f33;
     --light-color: #fff;
     --font-primary: 'Montserrat', sans-serif;
     --font-logo: 'Pacifico', cursive;
@@ -22,7 +22,7 @@ body {
     font-family: var(--font-primary);
     line-height: 1.6;
     background-color: var(--secondary-color);
-    color: var(--orange-color);
+    color: var(--dark-color);
 }
 
 .container {
@@ -88,7 +88,7 @@ body {
 }
 
 #navbar ul li a {
-    color: var(--orange-color);
+    color: var(--dark-color);
     padding: 1rem;
     text-decoration: none;
     font-weight: bold;
@@ -102,7 +102,7 @@ body {
 /* --- HERO --- */
 #hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://via.placeholder.com/1920x1080/333/ffffff?text=Prato+de+Moqueca+Apetitoso) no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(muqueca.jpg) no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,7 +261,7 @@ body {
 
 .location-info h3 {
     font-size: 1.5rem;
-    color: var(--orange-color);
+    color: var(--dark-color);
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     border-left: 4px solid var(--primary-color);
