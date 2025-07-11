@@ -367,4 +367,84 @@ footer {
     #hero .hero-content h1 { font-size: 2.5rem; }
     .sobre-content { flex-direction: column; }
     .sobre-content img { max-width: 100%; }
+    .container {
+        padding: 4rem 2rem; /* Padding maior para desktop */
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    /* Navegação de Desktop */
+    .hamburger {
+        display: none; /* Esconde o hambúrguer no desktop */
+    }
+
+    .nav-links {
+        position: static;
+        height: auto;
+        width: auto;
+        background: none;
+        flex-direction: row;
+        transition: none;
+        left: auto;
+    }
+
+    .nav-links ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .nav-links ul li {
+        margin: 0;
+    }
+    
+    .nav-links ul li a {
+        font-size: 1rem;
+    }
+    .nav-links ul li a:hover {
+        color: var(--primary-color);
+    }
+    
+    /* Hero */
+    #hero .hero-content h1 {
+        font-size: 4rem; /* Retorna a fonte grande */
+    }
+
+    /* Sobre */
+    #sobre .sobre-content {
+        flex-direction: row; /* Layout de duas colunas */
+        text-align: left;
+        gap: 3rem;
+    }
+
+    /* Cardápio */
+    .cardapio-grid {
+        /* O auto-fit cuida da responsividade, mas podemos forçar mais colunas */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    /* Reservas */
+    #reservation-form {
+        max-width: 600px;
+        margin: auto;
+    }
+    #reservation-form button {
+        width: auto;
+    }
+
+    /* Localização */
+    .location-content {
+        display: flex;
+        gap: 3rem;
+        text-align: left;
+    }
+    .location-info { flex: 1; margin: 0; }
+    .location-map { flex: 1.5; }
+    .location-map iframe { height: 400px; }
+    .btn-map { display: inline-block; width: auto; }
 }
