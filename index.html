@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Restaurante Só Moqueca</title>
-    <meta name="description" content="Feita da Bahia, feita por família."
+    <meta name="description" content="Feita da Bahia, feita por família.">
     
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
         <nav id="navbar">
             <a href="#hero" class="logo">Só Moqueca</a>
             <ul>
-                <li><a href="#sobre">Nossa História</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#cardapio">Cardápio</a></li>
                 <li><a href="#reservas">Reservas</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -29,7 +30,7 @@
     <main>
         <section id="hero">
             <div class="hero-content">
-                <h1>O Verdadeiro Sabor da Bahia</h1>
+                <h1>Verdadeiro Sabor da Bahia</h1>
                 <p>Feita da Bahia, feita por família.</p>
                 <a href="#reservas" class="btn-primary">Faça sua Reserva</a>
                 <a href="https://api.whatsapp.com/send/?phone=5571991955734" class="btn-primary">Faça seu pedido</a>
@@ -42,7 +43,6 @@
                     <h2>Nossa Panela, Nossa História</h2>
                     <p>Nascido do sonho de compartilhar o tesouro culinário da Bahia, o Moqueca do Axé traz para a sua mesa a tradição de gerações. Nossas receitas são preparadas em panelas de barro, com ingredientes frescos e, claro, o segredo que só o tempero baiano tem.</p>
                 </div>
-                <img src="https://via.placeholder.com/500x350/E67E22/ffffff?text=Panela+de+Barro" alt="Panela de barro com moqueca">
             </div>
         </section>
 
@@ -74,15 +74,15 @@
             <div class="container">
                 <div class="section-title">
                     <h2>Nossa Casa, Seu Ponto de Encontro</h2>
-                    <p>Estamos no coração boêmio de Salvador, de portas abertas para você.</p>
+                    <p>Estamos no coração do Subúrbio de Salvador, de portas abertas para você.</p>
                 </div>
         
                 <div class="location-content">
                     <div class="location-info">
                         <h3>Endereço:</h3>
                         <p>
-                            📍 Largo de Santana, nº 40<br>
-                            Rio Vermelho, Salvador - BA<br>
+                            📍 Rua Ladeira da Teresinha, Nº 301 - E<br>
+                            Suburbana, Salvador - BA<br>
                             CEP: 41950-010
                         </p>
         
@@ -114,7 +114,7 @@
         </section>
         <section id="reservas" class="container reveal">
             <h2 class="section-title">Garanta seu Lugar</h2>
-            <form id="reservation-form">
+            <form id="reservation-form" action="https://formspree.io/f/xjkrnjpe" method="POST">
                 <div class="form-group">
                     <label for="name">Nome:</label>
                     <input type="text" id="name" name="name" required>
