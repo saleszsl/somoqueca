@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Restaurante Só Moqueca</title>
+    <meta name="description" content="Feita da Bahia, feita por família."
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav id="navbar">
+            <a href="#hero" class="logo">Só Moqueca</a>
+            <ul>
+                <li><a href="#sobre">Nossa História</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>O Verdadeiro Sabor da Bahia</h1>
+                <p>Feita da Bahia, feita por família.</p>
+                <a href="#reservas" class="btn-primary">Faça sua Reserva</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="container reveal">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2>Nossa Panela, Nossa História</h2>
+                    <p>Nascido do sonho de compartilhar o tesouro culinário da Bahia, o Moqueca do Axé traz para a sua mesa a tradição de gerações. Nossas receitas são preparadas em panelas de barro, com ingredientes frescos e, claro, o segredo que só o tempero baiano tem.</p>
+                </div>
+                <img src="https://via.placeholder.com/500x350/E67E22/ffffff?text=Panela+de+Barro" alt="Panela de barro com moqueca">
+            </div>
+        </section>
+
+        <section id="cardapio" class="container">
+            <h2 class="section-title reveal">Nosso Cardápio</h2>
+            <div class="cardapio-grid">
+                <div class="card reveal">
+                    <img src="moqueca.avif" alt="Moqueca de Camarão">
+                    <h3>Moqueca de Camarão</h3>
+                    <p>Camarões frescos cozidos lentamente no leite de coco, azeite de dendê e pimentões coloridos. Acompanha arroz, farofa e pirão.</p>
+                    <span class="price">R$ 89,90</span>
+                </div>
+                <div class="card reveal">
+                    <img src="moqueca.avif" alt="Moqueca de Peixe">
+                    <h3>Moqueca de Peixe</h3>
+                    <p>Postas de peixe branco (badejo ou robalo) em um caldo rico e aromático. O clássico que nunca falha.</p>
+                    <span class="price">R$ 84,90</span>
+                </div>
+                <div class="card reveal">
+                    <img src="moqueca.avif" alt="Moqueca Mista">
+                    <h3>Moqueca Mista</h3>
+                    <p>A combinação perfeita de peixe e camarão para os indecisos. Sabor em dobro para você se deliciar.</p>
+                    <span class="price">R$ 99,90</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="localizacao">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Nossa Casa, Seu Ponto de Encontro</h2>
+                    <p>Estamos no coração boêmio de Salvador, de portas abertas para você.</p>
+                </div>
+        
+                <div class="location-content">
+                    <div class="location-info">
+                        <h3>Endereço:</h3>
+                        <p>
+                            📍 Largo de Santana, nº 40<br>
+                            Rio Vermelho, Salvador - BA<br>
+                            CEP: 41950-010
+                        </p>
+        
+                        <h3>Horário de Funcionamento:</h3>
+                        <p>
+                            <strong>Terça a Sexta:</strong> 12h às 15h | 18h às 22h<br>
+                            <strong>Sábados:</strong> 12h às 23h<br>
+                            <strong>Domingos e Feriados:</strong> 12h às 17h<br>
+                            <strong>Segundas:</strong> Fechado
+                        </p>
+        
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Largo+de+Santana+40+Rio+Vermelho+Salvador+BA" class="btn-map" target="_blank" rel="noopener noreferrer">
+                            Ver no Mapa e Traçar Rota
+                        </a>
+                    </div>
+        
+                    <div class="location-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6568349257523!2d-38.48785082492582!3d-12.993774790841289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71604a8b868ab79%3A0xb42551a31eadc30!2sLargo%20de%20Santana%20(Largo%20da%20Dinha)!5e0!3m2!1spt-BR!2sbr!4v1720669460029!5m2!1spt-BR!2sbr"
+                            width="600"
+                            height="450"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="reservas" class="container reveal">
+            <h2 class="section-title">Garanta seu Lugar</h2>
+            <form id="reservation-form">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="people">Número de Pessoas:</label>
+                    <input type="number" id="people" name="people" min="1" max="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Data:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Horário:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <button type="submit" class="btn-primary">Reservar Mesa</button>
+            </form>
+        </section>
+
+
+    </main>
+
+    <footer id="contato">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Só Moqueca</h3>
+                <p>Rua Ladeira da Teresinha, Nº 301 E - Suburbana</p>
+                <p>Salvador, Bahia</p>
+                <p><strong>Telefone:</strong> (71) 99999-8888</p>
+                <p><strong>Horários:</strong> Ter a Dom, 12h às 22h</p>
+            </div>
+            <div class="footer-social">
+                <p>Siga-nos!</p>
+                <a href="https://www.instagram.com/restaurantesomoqueca_/">Instagram</a> | <a href=""> Whatsapp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Só Moqueca. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
