@@ -1,7 +1,6 @@
 /* --- GERAL & VARIÁVEIS --- */
 :root {
-    --primary-color: #E67E22; /* Laranja Dendê */
-    --secondary-color: #FDF4E3; /* Bege Areia */
+    --primary-color: #E67E22; /* Laranja Dendê */    --secondary-color: #FDF4E3; /* Bege Areia */
     --dark-color: #493f33;
     --light-color: #fff;
     --font-primary: 'Montserrat', sans-serif;
@@ -127,12 +126,6 @@ body {
     gap: 3rem;
 }
 
-.sobre-content img {
-    max-width: 50%;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
-
 .sobre-text h2 {
     font-size: 2.5rem;
     color: var(--primary-color);
@@ -223,14 +216,13 @@ body {
 }
 
 /* --- LOCALIZAÇÃO --- */
-
 #localizacao {
     padding: 4rem 0;
-    background-color: white;
+    background-color: wheat;
 }
 
 #localizacao .section-title h2 {
-    color: var(--primary-color); /* Usa a cor primária definida no seu CSS */
+    color: var(--primary-color);
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1rem;
@@ -248,14 +240,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem; /* Espaço entre a informação e o mapa */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo em telas menores */
+    gap: 3rem;
+    flex-wrap: wrap;
 }
 
-/* Coluna da esquerda com as informações de texto */
 .location-info {
-    flex: 1; /* Ocupa o espaço disponível */
-    min-width: 300px; /* Largura mínima antes de quebrar a linha */
+    flex: 1;
+    min-width: 300px;
     max-width: 500px;
 }
 
@@ -277,7 +268,7 @@ body {
 .btn-map {
     display: inline-block;
     margin-top: 2rem;
-    background-color: #27ae60; /* Verde, cor associada a mapas e direções */
+    background-color: #27ae60;
     color: #fff;
     padding: 14px 28px;
     text-align: center;
@@ -292,9 +283,8 @@ body {
     transform: translateY(-3px);
 }
 
-/* Coluna da direita com o Iframe do Mapa */
 .location-map {
-    flex: 1.5; /* Faz o mapa ocupar um pouco mais de espaço que o texto */
+    flex: 1.5;
     min-width: 300px;
     max-width: 650px;
 }
@@ -309,18 +299,17 @@ body {
 /* --- Ajustes para Telas Menores (Responsividade) --- */
 @media (max-width: 992px) {
     .location-content {
-        flex-direction: column; /* Coloca o texto em cima e o mapa embaixo */
+        flex-direction: column;
         gap: 2rem;
     }
-
     .location-info, .location-map {
-        max-width: 100%; /* Faz ambos ocuparem a largura total */
+        max-width: 100%;
     }
 }
 
 /* --- FOOTER --- */
 footer {
-    background-color: rgb(46, 43, 43);
+    background-color: #2e2b2b;
     color: var(--light-color);
     text-align: center;
     padding-top: 3rem;
@@ -354,97 +343,118 @@ footer {
     opacity: 0;
     transition: transform 0.8s ease, opacity 0.8s ease;
 }
-
 .reveal.active {
     transform: translateY(0);
     opacity: 1;
 }
 
-@media(max-width: 768px) {
-    #navbar { flex-direction: column; padding: 1rem; }
-    #navbar.scrolled { padding: 1rem; }
-    #navbar ul { margin-top: 1rem; }
-    #hero .hero-content h1 { font-size: 2.5rem; }
-    .sobre-content { flex-direction: column; }
-    .sobre-content img { max-width: 100%; }
+/* Responsividade para tablets e celulares */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    #navbar.scrolled {
+        padding: 1rem;
+    }
+    #navbar ul {
+        margin-top: 0.5rem;
+    }
+    #hero .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    #hero .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .btn-primary {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    .sobre-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        max-width: 100%;
+    }
     .container {
-        padding: 4rem 2rem; /* Padding maior para desktop */
+        padding: 2rem 1rem;
     }
-
     .section-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
-
-    /* Navegação de Desktop */
-    .hamburger {
-        display: none; /* Esconde o hambúrguer no desktop */
+    .cardapio-grid {
+        grid-template-columns: 1fr;
     }
-
-    .nav-links {
-        position: static;
-        height: auto;
-        width: auto;
-        background: none;
-        flex-direction: row;
-        transition: none;
-        left: auto;
+    .card img {
+        height: 150px;
     }
+    #reservation-form {
+        padding: 1rem;
+    }
+    .location-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: left;
+    }
+    .location-info, .location-map {
+        max-width: 100%;
+    }
+    .location-map iframe {
+        height: 250px;
+    }
+    .btn-map {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
 
-    .nav-links ul {
-        display: flex;
+/* Responsividade para celulares pequenos */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem 0.5rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    #hero .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    .cardapio-grid {
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
+    .card img {
+        height: 100px;
+    }
+    .location-map iframe {
+        height: 180px;
+    }
+}
 
-    .nav-links ul li {
-        margin: 0;
+/* Responsividade para celulares muito pequenos */
+@media (max-width: 400px) {
+    .container {
+        padding: 0.5rem 0.2rem;
     }
-    
-    .nav-links ul li a {
-        font-size: 1rem;
+    .section-title {
+        font-size: 1.1rem;
     }
-    .nav-links ul li a:hover {
-        color: var(--primary-color);
-    }
-    
-    /* Hero */
     #hero .hero-content h1 {
-        font-size: 4rem; /* Retorna a fonte grande */
+        font-size: 1.1rem;
     }
-
-    /* Sobre */
-    #sobre .sobre-content {
-        flex-direction: row; /* Layout de duas colunas */
-        text-align: left;
-        gap: 3rem;
-    }
-
-    /* Cardápio */
     .cardapio-grid {
-        /* O auto-fit cuida da responsividade, mas podemos forçar mais colunas */
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 0.5rem;
     }
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    .card img {
+        height: 60px;
     }
-
-    /* Reservas */
-    #reservation-form {
-        max-width: 600px;
-        margin: auto;
+    .location-map iframe {
+        height: 100px;
     }
-    #reservation-form button {
-        width: auto;
-    }
-
-    /* Localização */
-    .location-content {
-        display: flex;
-        gap: 3rem;
-        text-align: left;
-    }
-    .location-info { flex: 1; margin: 0; }
-    .location-map { flex: 1.5; }
-    .location-map iframe { height: 400px; }
-    .btn-map { display: inline-block; width: auto; }
 }
